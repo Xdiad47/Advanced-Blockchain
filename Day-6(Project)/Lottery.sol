@@ -48,4 +48,8 @@ contract Lottery{
         address payable to = msg.sender;
         selfdestruct(to);
     } 
+    function resetBalance(uint256 value)public {
+    for (uint i=0; i< addressOfParticipation.length ; i++){
+        addressOfLotteryParticipation[addressOfParticipation[i]] = value;
+    }
 }
